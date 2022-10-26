@@ -2,6 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+  font-size: 62.5%;
+}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -15,9 +19,9 @@ body {
   top: 50%;
   left: 50%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 25rem;
-  width: 37.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  height: 30rem;
+  width: 40rem;
   position: absolute;
   overflow: hidden;
   border: 1px solid transparent;
@@ -34,6 +38,9 @@ body {
   font-family: "Cormorant Garamond", serif;
   font-weight: 900;
 }
+.content-info h1:hover {
+  color: darkred;
+}
 .content-info .price {
   font-family: "Space Mono", monospace;
   font-weight: 900;
@@ -43,4 +50,20 @@ body {
 }
 .content-info bottom {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 998px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+}
+@media (max-width: 360px) {
+  html {
+    font-size: 30%;
+  }
 }/*# sourceMappingURL=style.css.map */
